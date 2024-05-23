@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Produto>
+
+<h1>
+    Lista de Produtos
+</h1>
+<table class="table table-striped">
+    <tr>
+        <td>Código</td>
+        <td>Descrição</td>
+        <td>Preço</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        // o Model aqui agora é uma coleção de Produtos, não Produto. Corresponde ao colocado na 1a linha desse código
+        // item é um elemento da coleção
+        <tr>
+            <td>@item.Codigo</td>
+            <td>@item.Descricao</td>
+            <td>@item.Preco</td>
+        </tr>
+    }
+
+</table>
